@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-teal-accent: #008282;
+  --color-teal-light: #e0f2f1;
+  --color-bg-base: #f7f9fa;
+  --color-text-vibrant-dark: #1a1a1a;
+  --color-text-vibrant-muted: #666666;
+  --radius-vibrant-lg: 32px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-vibrant-dark);
+}
+
+@utility no-scrollbar {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
