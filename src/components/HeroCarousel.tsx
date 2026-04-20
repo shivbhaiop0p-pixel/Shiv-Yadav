@@ -142,11 +142,11 @@ export default function HeroCarousel({ onSlideChange }: { onSlideChange?: (index
   const currentSlide = SLIDES[currentIndex];
 
   return (
-    <section className="flex-1 px-10 py-10 max-w-7xl mx-auto min-h-[600px] flex items-center justify-center overflow-hidden">
-      <div className={`relative w-full h-full max-h-[600px] aspect-[16/9] lg:aspect-[21/9] rounded-[--radius-vibrant-lg] shadow-[0_20px_50px_rgba(0,130,130,0.1)] border border-white/50 bg-gradient-to-br ${currentSlide.gradient} overflow-hidden transition-all duration-700`}>
+    <section className="flex-1 px-4 py-6 md:px-10 md:py-10 max-w-7xl mx-auto min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
+      <div className={`relative w-full h-full max-h-[700px] aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] rounded-[--radius-vibrant-lg] shadow-[0_20px_50px_rgba(0,130,130,0.1)] border border-white/50 bg-gradient-to-br ${currentSlide.gradient} overflow-hidden transition-all duration-700`}>
         {/* Abstract Shapes */}
-        <div className="absolute top-[-100px] right-[-50px] w-[300px] h-[300px] bg-white/20 rounded-full z-1" />
-        <div className="absolute bottom-[50px] left-[-30px] w-[150px] h-[150px] bg-white/20 rounded-full z-1" />
+        <div className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] md:top-[-100px] md:right-[-50px] md:w-[300px] md:h-[300px] bg-white/20 rounded-full z-1" />
+        <div className="absolute bottom-[50px] left-[-30px] w-[100px] h-[100px] md:w-[150px] md:h-[150px] bg-white/20 rounded-full z-1" />
 
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -160,13 +160,13 @@ export default function HeroCarousel({ onSlideChange }: { onSlideChange?: (index
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.5 }
             }}
-            className="absolute inset-0 flex flex-col items-center justify-center text-center px-10 z-10"
+            className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 md:px-10 z-10"
           >
             <motion.h2 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-[36px] md:text-[56px] font-[800] text-[--color-text-vibrant-dark] mb-5 leading-[1.1]"
+              className="text-[28px] sm:text-[36px] md:text-[56px] font-[800] text-[--color-text-vibrant-dark] mb-4 md:mb-5 leading-[1.2] md:leading-[1.1]"
             >
               {currentSlide.title}
             </motion.h2>
@@ -175,7 +175,7 @@ export default function HeroCarousel({ onSlideChange }: { onSlideChange?: (index
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-[16px] md:text-[18px] text-[--color-text-vibrant-muted] max-w-[700px] mb-8 md:mb-10 leading-[1.6]"
+              className="text-[14px] md:text-[18px] text-[--color-text-vibrant-muted] max-w-[700px] mb-6 md:mb-10 leading-[1.6]"
             >
               {currentSlide.subtitle}
             </motion.p>
@@ -185,12 +185,12 @@ export default function HeroCarousel({ onSlideChange }: { onSlideChange?: (index
                initial={{ y: 20, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ delay: 0.4 }}
-               className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10 md:mb-12"
+               className="flex flex-wrap justify-center gap-4 md:gap-10 mb-8 md:mb-12"
             >
               {currentSlide.icons.map((icon, idx) => (
                 <div key={idx} className="flex flex-col items-center group">
-                  <div className={`w-14 h-14 md:w-[72px] md:h-[72px] ${currentSlide.bgColor} ${currentSlide.iconColor} rounded-[20px] shadow-[0_8px_20px_rgba(0,0,0,0.05)] border border-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <icon.component className="w-6 h-6 md:w-8 md:h-8" />
+                  <div className={`w-12 h-12 md:w-[72px] md:h-[72px] ${currentSlide.bgColor} ${currentSlide.iconColor} rounded-[16px] md:rounded-[20px] shadow-[0_8px_20px_rgba(0,0,0,0.05)] border border-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <icon.component className="w-5 h-5 md:w-8 md:h-8" />
                   </div>
                 </div>
               ))}
@@ -200,7 +200,7 @@ export default function HeroCarousel({ onSlideChange }: { onSlideChange?: (index
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="px-8 md:px-12 py-3 md:py-[18px] bg-transparent text-[--color-teal-accent] font-bold rounded-[50px] border-2 border-[--color-teal-accent] hover:bg-[--color-teal-accent] hover:text-white hover:shadow-[0_10px_20px_rgba(0,130,130,0.2)] transition-all duration-300 cursor-pointer text-sm md:text-base"
+              className="px-6 md:px-12 py-2.5 md:py-[18px] bg-transparent text-[--color-teal-accent] font-bold rounded-[50px] border-2 border-[--color-teal-accent] hover:bg-[--color-teal-accent] hover:text-white hover:shadow-[0_10px_20px_rgba(0,130,130,0.2)] transition-all duration-300 cursor-pointer text-xs md:text-base"
             >
               Explore Services
             </motion.button>

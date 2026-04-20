@@ -23,12 +23,12 @@ export default function CreatorsSection({ activeSlideIndex = 0 }: { activeSlideI
   const currentGradient = gradients[activeSlideIndex] || gradients[0];
 
   return (
-    <section className={`py-24 bg-gradient-to-br ${currentGradient} overflow-hidden transition-colors duration-1000`}>
-      <div className="max-w-7xl mx-auto px-10">
+    <section className={`py-16 md:py-24 bg-gradient-to-br ${currentGradient} overflow-hidden transition-colors duration-1000`}>
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-[900] text-[--color-text-vibrant-dark] inline-flex items-center gap-1">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-[900] text-[--color-text-vibrant-dark] inline-flex items-center gap-1">
             Creators We Partner W<span>i</span>
             <span className="relative inline-block">
               t

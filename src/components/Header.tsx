@@ -37,7 +37,7 @@ export default function Header() {
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.02)]' : 'bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)]'
       }`}
     >
-      <div className="max-w-7xl mx-auto h-full px-10 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto h-full px-6 md:px-10 flex items-center justify-between">
         {/* Left Side: Logo & Brand */}
         <div className="flex items-center">
           <div className="w-10 h-10 bg-[--color-teal-accent] rounded-lg mr-3 flex items-center justify-center text-white font-bold text-2xl">

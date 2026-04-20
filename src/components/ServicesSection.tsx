@@ -42,11 +42,11 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-10">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-[--color-text-vibrant-dark] mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-black text-[--color-text-vibrant-dark] mb-4">
             Our Services
           </h2>
           <div className="w-16 h-1 bg-[--color-teal-accent] mx-auto rounded-full" />
