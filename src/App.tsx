@@ -6,12 +6,12 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import HeroCarousel from './components/HeroCarousel';
-import PromotionalSection from './components/PromotionalSection';
-import CreatorsSection from './components/CreatorsSection';
+import AboutMeSection from './components/AboutMeSection';
 import ServicesSection from './components/ServicesSection';
+import StatsSection from './components/StatsSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import TestimonialsSection from './components/TestimonialsSection';
-import CallToAction from './components/CallToAction';
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -23,12 +23,12 @@ export default function App() {
       
       <main className="flex-grow">
         <HeroCarousel onSlideChange={setActiveSlideIndex} />
-        <PromotionalSection activeSlideIndex={activeSlideIndex} />
-        <CreatorsSection activeSlideIndex={activeSlideIndex} />
+        <AboutMeSection />
         <ServicesSection />
+        <StatsSection />
         <TestimonialsSection />
         <WhyChooseUs />
-        <CallToAction />
+        <ContactSection />
       </main>
 
       <Footer />

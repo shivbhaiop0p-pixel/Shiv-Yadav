@@ -3,19 +3,19 @@ import { Search, Menu, X, ChevronDown, Rocket } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const NAV_ITEMS = [
-  { name: 'Home', href: '#', active: true },
-  { name: 'About Us', href: '#' },
+  { name: 'Home', href: '#home', active: true },
+  { name: 'About Us', href: '#about' },
   { 
     name: 'Services', 
-    href: '#', 
+    href: '#services', 
     dropdown: ['SEO Optimization', 'Content Marketing', 'Social Media', 'AI Automation'] 
   },
   { 
     name: 'Packages', 
-    href: '#', 
+    href: '#packages', 
     dropdown: ['Starter', 'Professional', 'Enterprise'] 
   },
-  { name: 'Contact', href: '#' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Header() {
@@ -160,6 +160,7 @@ export default function Header() {
                         <div className="flex flex-col gap-2">
                           <a 
                             href={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
                             className={`text-lg font-bold ${item.active ? 'text-teal-600' : 'text-gray-800'}`}
                           >
                             {item.name}

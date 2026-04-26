@@ -53,12 +53,15 @@ export default function Footer() {
 
           {/* Center: Brand Info */}
           <div className="flex flex-col items-center order-1 md:order-2">
-            <div className="px-10 py-5 rounded-full border border-gray-200 bg-white shadow-sm flex flex-col sm:flex-row items-center gap-6 md:gap-8">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[#111] rounded-lg flex items-center justify-center text-white font-black text-sm">
+            <div className="px-10 py-5 rounded-[40px] border border-gray-200 bg-white shadow-sm flex flex-col sm:flex-row items-center gap-6 md:gap-8">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#e8192c] rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-500/20">
                   B
                 </div>
-                <span className="font-black text-xl tracking-tighter text-[#111]">BLAZON</span>
+                <div className="flex flex-col leading-none">
+                  <span className="font-black text-2xl tracking-tighter text-[#111]">BLAZON</span>
+                  <span className="text-[10px] text-[#e8192c] font-black uppercase tracking-[0.2em] ml-0.5">Media</span>
+                </div>
               </div>
               
               <div className="w-px h-8 bg-gray-200 hidden sm:block" />

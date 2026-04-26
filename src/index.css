@@ -11,6 +11,10 @@
   --radius-vibrant-lg: 32px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-base);

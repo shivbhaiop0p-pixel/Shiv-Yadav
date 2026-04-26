@@ -142,7 +142,7 @@ export default function HeroCarousel({ onSlideChange }: { onSlideChange?: (index
   const currentSlide = SLIDES[currentIndex];
 
   return (
-    <section className="flex-1 px-4 py-6 md:px-10 md:py-10 max-w-7xl mx-auto min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="flex-1 px-4 py-6 md:px-10 md:py-10 max-w-7xl mx-auto min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
       <div className={`relative w-full h-full max-h-[700px] aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] rounded-[--radius-vibrant-lg] shadow-[0_20px_50px_rgba(0,130,130,0.1)] border border-white/50 bg-gradient-to-br ${currentSlide.gradient} overflow-hidden transition-all duration-700`}>
         {/* Abstract Shapes */}
         <div className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] md:top-[-100px] md:right-[-50px] md:w-[300px] md:h-[300px] bg-white/20 rounded-full z-1" />
